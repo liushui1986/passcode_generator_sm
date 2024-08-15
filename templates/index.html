@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator by SM</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <form method="post">
+            <label for="letters_upp">Number of Letters of Uppercase:</label>
+            <input type="number" id="letters_upp" name="letters_upp" min="1" required><br><br>
+
+            <label for="letters_low">Number of Letters of Lowercase:</label>
+            <input type="number" id="letters_low" name="letters_low" min="1" required><br><br>
+
+            <label for="symbols">Number of Symbols:</label>
+            <input type="number" id="symbols" name="symbols" min="1" required><br><br>
+
+            <label for="numbers">Number of Numbers:</label>
+            <input type="number" id="numbers" name="numbers" min="1" required><br><br>
+
+            <button type="submit">Generate Password</button>
+        </form>
+
+        {% if password %}
+        <div class="password-display">
+            <strong>Generated Password:</strong> {{ password }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
